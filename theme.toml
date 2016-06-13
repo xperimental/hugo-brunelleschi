@@ -1,0 +1,17 @@
+name = "Brunelleschi"
+license = "GPL"
+licenselink = "http://themes.svn.wordpress.org/brunelleschi/1.6.5/license.txt"
+description = "A hugo theme based on the WordPress theme with the same name."
+homepage = "https://github.com/xperimental/hugo-brunelleschi"
+tags = ["blog", "technical", "personal"]
+features = ["blog", "technical", "personal"]
+min_version = 0.16
+
+[author]
+    name = "Robert Jacob"
+    homepage = "https://www.sourcewalker.net"
+
+[original]
+    author =  "Kit MacAllister"
+    homepage = "http://kittrick.co/"
+    repo = "http://themes.svn.wordpress.org/brunelleschi/1.6.5/"
