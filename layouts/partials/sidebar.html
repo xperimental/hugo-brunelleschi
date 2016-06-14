@@ -1,0 +1,27 @@
+		<div id="sidebar" class="widget-area threecol last" role="complementary">
+			<ul class="xoxo">
+				<li class="widget-container widget_links"><h3 class="widget-title">#Self</h3>
+					<ul class='xoxo blogroll'>
+					{{ range .Site.Menus.selflinks }}
+						<li><a href="{{ .URL | absURL }}" rel="me">{{ .Name }}</a></li>
+					{{ end }}
+					</ul>
+				</li>
+
+				<li class="widget-container widget_links"><h3 class="widget-title">Blogs I read</h3>
+					<ul class='xoxo blogroll'>
+					{{ range .Site.Menus.blogroll }}
+						<li><a href="{{ .URL | absURL }}" rel="me">{{ .Name }}</a></li>
+					{{ end }}
+					</ul>
+				</li>
+
+				<li class="widget-container widget_links"><h3 class="widget-title">Friends</h3>
+					<ul class='xoxo blogroll'>
+					{{ range .Site.Menus.friendlinks }}
+						<li><a href="{{ .URL | absURL }}" rel="me">{{ .Name }}</a></li>
+					{{ end }}
+					</ul>
+				</li>
+			</ul>
+		</div><!-- #primary .widget-area -->
