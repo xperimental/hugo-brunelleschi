@@ -1,0 +1,11 @@
+<div class="entry-meta">
+    {{ if isset .Params "author"}}
+    <span class="meta-sep">by</span> <span class="author vcard">
+        <a class="url fn n" href="AUTHORPOSTS" title="View all posts by AUTHOR">{{ .Params.author }}</a>
+    </span>
+    {{ end }}
+    <span class="meta-prep meta-prep-author">Posted on</span>
+    <a href="{{ .URL }}" title="{{ .Date.Format "15:04" }}" rel="bookmark">
+        <span class="entry-date">{{ .Date.Format "2006-01-02" }}</span>
+    </a>
+</div><!-- .entry-meta -->

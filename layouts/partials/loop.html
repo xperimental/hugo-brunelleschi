@@ -1,0 +1,68 @@
+{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+{{ if gt $paginator.TotalPages 1 }}
+	<nav id="nav-above" class="navigation">
+		<div class="nav-previous"><span class="meta-nav">&larr;</span> Older posts</div>
+		<div class="nav-next">Newer posts <span class="meta-nav">&rarr;</span></div>
+	</nav><!-- #nav-above -->
+{{ end }}
+
+{{ $baseurl := .Site.BaseURL }}
+{{ range $paginator.Pages }}
+		<article id="post-<?php the_ID(); ?>" class="post type-post status-publish format-standard hentry">
+			<header>
+				<h2 class="entry-title"><a href="{{ .URL }}" title="Permalink für {{ .Title }}" rel="bookmark">{{ .Title }}</a></h2>
+				{{ partial "posted-on" . }}
+			</header>
+			<div class="entry-content">
+				<p>
+					{{ .Summary }}
+				</p>
+				<p>
+					<a href="{{ .URL }}" class="more-link">
+						Continue reading <span class="meta-nav">&rarr;</span>
+					</a>
+				</p>
+			</div><!-- .entry-content -->
+
+			<div class="entry-utility">
+				{{ if isset .Params "categories"}}
+					<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span>
+						{{ range .Params.categories}}
+							<a href="{{ "/kategorie/" | absURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+						{{ end }}
+					</span>
+					<span class="meta-sep">|</span>
+				{{ end }}
+				{{ if isset .Params "tags"}}
+					<span class="tag-links">
+						<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span>
+						{{ range .Params.tags }}
+							<a href="{{ "/tags/" | absURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>
+						{{ end }}
+					</span>
+					<span class="meta-sep">|</span>
+				{{ end }}
+			</div><!-- .entry-utility -->
+		</article><!-- #post-## -->
+{{ end }}
+
+{{ if gt $paginator.TotalPages 1 }}
+		<nav id="nav-below" class="navigation">
+			{{ if $paginator.HasNext }}
+			<div class="nav-previous">
+				<a href="{{ if $paginator.HasNext }}{{ $paginator.Next.URL }}{{ else }}#{{ end }}">
+					<span class="meta-nav">&larr;</span> Older posts
+				</a>
+			</div>
+			{{ end }}
+
+			{{ if $paginator.HasPrev }}
+			<div class="nav-next">
+				<a class="disabled" href="{{ if $paginator.HasPrev }}{{ $paginator.Prev.URL }}{{ else }}#{{ end }}">
+					Newer posts <span class="meta-nav">&rarr;</span>
+				</a>
+			</div>
+			{{ end }}
+		</nav><!-- #nav-below -->
+{{ end }}
