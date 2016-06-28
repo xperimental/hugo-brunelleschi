@@ -4,11 +4,13 @@
         <p>
             {{ .Summary }}
         </p>
+        {{ if .Truncated }}
         <p>
             <a href="{{ .URL }}" class="more-link">
                 Continue reading <span class="meta-nav">&rarr;</span>
             </a>
         </p>
+        {{ end }}
     </div>
     {{ partial "utility" . }}
 </article>
