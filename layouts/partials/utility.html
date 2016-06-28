@@ -3,7 +3,7 @@
         <span class="cat-links">
             <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span>
             {{ range .Params.categories}}
-                <a href="{{ "/kategorie/" | absURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+                <a href="{{ "/categories/" | absURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
             {{ end }}
         </span>
         <span class="meta-sep">|</span>
