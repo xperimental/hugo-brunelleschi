@@ -1,12 +1,12 @@
 <nav id="nav-above" class="navigation">
     {{ if .PrevInSection }}
     <div class="nav-previous">
-        <a href="{{ .PrevInSection.URL }}"><span class="meta-nav">&larr;</span> {{ .PrevInSection.Title }}</a>
+        <a href="{{ .PrevInSection.URL }}" rel="prev"><span class="meta-nav">&larr;</span> {{ .PrevInSection.Title }}</a>
     </div>
     {{ end }}
     {{ if .NextInSection }}
     <div class="nav-next">
-        <a href="{{ .NextInSection.URL }}">{{ .NextInSection.Title }} <span class="meta-nav">&rarr;</span></a>
+        <a href="{{ .NextInSection.URL }}" rel="next">{{ .NextInSection.Title }} <span class="meta-nav">&rarr;</span></a>
     </div>
     {{ end }}
 </nav>
