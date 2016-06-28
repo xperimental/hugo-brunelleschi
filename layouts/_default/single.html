@@ -1,8 +1,7 @@
 {{ partial "header" . }}
-		<div id="main" role="main" class="ninecol">
-
-{{ partial "loop" . }}
-
-		</div><!-- #main -->
+<div id="main" role="main" class="ninecol single">
+	{{ partial "top-nav" . }}
+	{{ partial "post" . }}
+</div>
 {{ partial "sidebar" . }}
 {{ partial "footer" . }}

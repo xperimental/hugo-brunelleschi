@@ -1,0 +1,14 @@
+<article id="post-{{ .UniqueID }}" class="post type-post status-publish format-standard hentry">
+    {{ partial "post-header" . }}
+    <div class="entry-content">
+        <p>
+            {{ .Summary }}
+        </p>
+        <p>
+            <a href="{{ .URL }}" class="more-link">
+                Continue reading <span class="meta-nav">&rarr;</span>
+            </a>
+        </p>
+    </div>
+    {{ partial "utility" . }}
+</article>

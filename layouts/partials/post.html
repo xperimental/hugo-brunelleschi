@@ -1,0 +1,9 @@
+<article id="post-{{ .UniqueID }}" class="post type-post status-publish format-standard hentry">
+    {{ partial "post-header" . }}
+    <div class="entry-content">
+        <p>
+            {{ .Content }}
+        </p>
+    </div>
+    {{ partial "utility" . }}
+</article>

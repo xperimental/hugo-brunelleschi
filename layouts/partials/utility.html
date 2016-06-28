@@ -1,0 +1,20 @@
+<div class="entry-utility">
+    {{ if isset .Params "categories"}}
+        <span class="cat-links">
+            <span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span>
+            {{ range .Params.categories}}
+                <a href="{{ "/kategorie/" | absURL }}{{ . | urlize }}" rel="category tag">{{ . }}</a>
+            {{ end }}
+        </span>
+        <span class="meta-sep">|</span>
+    {{ end }}
+    {{ if isset .Params "tags"}}
+        <span class="tag-links">
+            <span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span>
+            {{ range .Params.tags }}
+                <a href="{{ "/tags/" | absURL }}{{ . | urlize }}" rel="tag">{{ . }}</a>
+            {{ end }}
+        </span>
+        <span class="meta-sep">|</span>
+    {{ end }}
+</div>
