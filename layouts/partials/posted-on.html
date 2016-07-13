@@ -3,7 +3,7 @@
     <span class="meta-sep">by</span> <span class="author vcard">{{ .Params.author }}</span>
     {{ end }}
     <span class="meta-prep meta-prep-author">Posted on</span>
-    <a href="{{ .URL }}" title="{{ .Date.Format "15:04" }}" rel="bookmark">
+    <a href="{{ .Permalink }}" title="{{ .Date.Format "15:04" }}" rel="bookmark">
         <span class="entry-date">{{ .Date.Format "02. Jan 2006" }}</span>
     </a>
 </div>
