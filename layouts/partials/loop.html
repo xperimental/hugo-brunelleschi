@@ -1,9 +1,9 @@
 {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
 {{ if gt $paginator.TotalPages 1 }}
 	<nav id="nav-above" class="navigation">
-		<div class="nav-previous"><span class="meta-nav">&larr;</span> Older posts</div>
-		<div class="nav-next">Newer posts <span class="meta-nav">&rarr;</span></div>
-	</nav><!-- #nav-above -->
+		<div class="nav-previous"><span class="meta-nav">&larr;</span> Ältere Artikel</div>
+		<div class="nav-next">Neuere Artikel <span class="meta-nav">&rarr;</span></div>
+	</nav>
 {{ end }}
 
 {{ $baseurl := .Site.BaseURL }}
@@ -16,7 +16,7 @@
 			{{ if $paginator.HasNext }}
 			<div class="nav-previous">
 				<a href="{{ if $paginator.HasNext }}{{ $paginator.Next.URL }}{{ else }}#{{ end }}">
-					<span class="meta-nav">&larr;</span> Older posts
+					<span class="meta-nav">&larr;</span> Ältere Artikel
 				</a>
 			</div>
 			{{ end }}
@@ -24,7 +24,7 @@
 			{{ if $paginator.HasPrev }}
 			<div class="nav-next">
 				<a class="disabled" href="{{ if $paginator.HasPrev }}{{ $paginator.Prev.URL }}{{ else }}#{{ end }}">
-					Newer posts <span class="meta-nav">&rarr;</span>
+					Neuere Artikel <span class="meta-nav">&rarr;</span>
 				</a>
 			</div>
 			{{ end }}

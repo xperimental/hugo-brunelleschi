@@ -1,8 +1,8 @@
 <div class="entry-meta">
     {{ if isset .Params "author"}}
-    <span class="meta-sep">by</span> <span class="author vcard">{{ .Params.author }}</span>
+    <span class="meta-sep">von</span> <span class="author vcard">{{ .Params.author }}</span>
     {{ end }}
-    <span class="meta-prep meta-prep-author">Posted on</span>
+    <span class="meta-prep meta-prep-author">Verfasst am</span>
     <a href="{{ .Permalink }}" title="{{ .Date.Format "15:04" }}" rel="bookmark">
         <span class="entry-date">{{ .Date.Format "02. Jan 2006" }}</span>
     </a>
