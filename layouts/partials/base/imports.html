@@ -7,3 +7,6 @@
 <link rel='stylesheet' id='brunelleschi_center-navigation-css'  href='{{ "/css/center-navigation.css" | absURL }}' type='text/css' media='all' />
 <link rel='stylesheet' id='brunelleschi_fixed-navigation-css'  href='{{ "/css/fixed-navigation.css" | absURL }}' type='text/css' media='all' />
 <link rel='stylesheet' id='style.css-css'  href='{{ "/css/style.css" | absURL }}' type='text/css' media='all' />
+{{ if .Site.Params.favicon }}
+<link rel="shortcut icon" href='{{ .Site.Params.favicon | absURL }}' />
+{{ end }}
