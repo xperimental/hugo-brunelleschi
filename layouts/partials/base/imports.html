@@ -1,7 +1,7 @@
 <style type="text/css"> #wrapper { max-width: 960px !important;} </style>
-{{ if .RSSlink }}
-<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-<link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+{{ if .RSSLink }}
+<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
 <link rel='stylesheet' id='brunelleschi_modern-css'  href='{{ "/css/modern.css" | absURL }}' type='text/css' media='all' />
 <link rel='stylesheet' id='brunelleschi_center-navigation-css'  href='{{ "/css/center-navigation.css" | absURL }}' type='text/css' media='all' />
