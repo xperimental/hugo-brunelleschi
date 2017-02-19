@@ -1,9 +1,13 @@
 {{ partial "header" . }}
-		<div id="main" role="main" class="ninecol">
-            <h1 class="page-title">
-                Archiv für: <span>{{ .Title }}</span>
-            </h1>
-{{ partial "loop" . }}
-		</div><!-- #main -->
+<div id="main" role="main" class="ninecol">
+    {{ if .Content }}
+    {{ partial "post" . }}
+    {{ else }}
+    <h1 class="page-title">
+        Archiv für: <span>{{ .Title }}</span>
+    </h1>
+    {{ partial "loop" . }}
+    {{ end }}
+</div>
 {{ partial "sidebar" . }}
 {{ partial "footer" . }}
