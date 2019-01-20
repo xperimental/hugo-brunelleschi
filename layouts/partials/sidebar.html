@@ -11,7 +11,7 @@
 				<li class="widget-container widget_links"><h3 class="widget-title">Blogroll</h3>
 					<ul class='xoxo blogroll'>
 					{{ range .Site.Menus.blogroll }}
-						<li><a href="{{ .URL | absURL }}" rel="me">{{ .Name }}</a></li>
+						<li><a href="{{ .URL | absURL }}" rel="external">{{ .Name }}</a></li>
 					{{ end }}
 					</ul>
 				</li>
@@ -19,7 +19,7 @@
 				<li class="widget-container widget_links"><h3 class="widget-title">Freunde</h3>
 					<ul class='xoxo blogroll'>
 					{{ range .Site.Menus.friendlinks }}
-						<li><a href="{{ .URL | absURL }}" rel="me">{{ .Name }}</a></li>
+						<li><a href="{{ .URL | absURL }}" rel="external">{{ .Name }}</a></li>
 					{{ end }}
 					</ul>
 				</li>
